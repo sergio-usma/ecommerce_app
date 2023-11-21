@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :products, path: '/'
+end
+
+=begin
   delete '/products/:id', to: 'products#destroy'
   patch '/products/:id', to: 'products#update'
   post '/products', to: 'products#create'
@@ -6,4 +10,4 @@ Rails.application.routes.draw do
   get '/products', to: 'products#index'
   get '/products/:id', to: 'products#show', as: :product
   get '/products/:id/edit', to: 'products#edit', as: :edit_product
-end
+=end
